@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <title>Document</title> <link href="/build/app.css" rel="stylesheet"> <script type="module" src="/build/app.esm.js"></script> <script nomodule="" src="/build/app.js"></script> </head> <body> <app-root></app-root> <script>if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  // auto-unregister service worker during dev mode
+  navigator.serviceWorker.getRegistration().then(function(registration) {
+    if (registration) {
+      registration.unregister().then(function() { location.reload(true) });
+    }
+  });
+}</script></body></html>
